@@ -1,0 +1,9 @@
+{
+  "name": "Fastify",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "fastify": "^5.7.4"
+  }
+}
