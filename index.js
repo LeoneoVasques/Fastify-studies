@@ -2,17 +2,17 @@ const fastify = require("fastify");
 
 const app = fastify();
 const users = [
-    { id: 1, name: "Alice" },
-    { id: 2, name: "Bob" },
-    { id: 3, name: "Charlie" },
+    { id: 1, name: "Alice", age: 30 },
+    { id: 2, name: "Bob", age: 25 },
+    { id: 3, name: "Charlie", age: 35 },
 ];
 
 app.post("/users", function handler(request, response) {
   const data = request.body;
-  if (!data.name) {
-    return response.status(400).send({ error: "Name is required" });
+  if (!data.name || !data.age) {
+    return response.status(400).send({ error: "Name and age are required" });
   }
-  const newUser = { id: users.length + 1, name: data.name };
+  const newUser = { id: users.length + 1, name: data.name, age: data.age };
   users.push(newUser);
 
   response.status(201).send(newUser);
@@ -47,6 +47,17 @@ app.patch("/users/:id", function handler(request, response) {
     user.name = data.name;
   }
   response.send(user);
+});
+
+app.delete("/users/:id", function handler(request, response) {
+  const id = parseInt(request.params.id);
+  const userId = users.findIndex(user => user.id === id);
+
+    if (userId === -1) {
+      return response.status(404).send({ error: "User not found" });
+    }
+    users.splice(userId, 1);
+    response.send({ message: "User deleted successfully" });
 });
 
 // Run the server!
