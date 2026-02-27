@@ -83,6 +83,14 @@ avvio@^9.0.0:
     "@fastify/error" "^4.0.0"
     fastq "^1.17.1"
 
+bcrypt@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/bcrypt/-/bcrypt-6.0.0.tgz#86643fddde9bcd0ad91400b063003fa4b0312835"
+  integrity sha512-cU8v/EGSrnH+HnxV2z0J7/blxH8gq7Xh2JFT6Aroax7UohdmiJJlxApMxtKfuI7z68NvvVcmR78k2LbT6efhRg==
+  dependencies:
+    node-addon-api "^8.3.0"
+    node-gyp-build "^4.8.4"
+
 cookie@^1.0.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/cookie/-/cookie-1.1.1.tgz#3bb9bdfc82369db9c2f69c93c9c3ceb310c88b3c"
@@ -189,6 +197,16 @@ light-my-request@^6.0.0:
     cookie "^1.0.1"
     process-warning "^4.0.0"
     set-cookie-parser "^2.6.0"
+
+node-addon-api@^8.3.0:
+  version "8.6.0"
+  resolved "https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-8.6.0.tgz#b22497201b465cd0a92ef2c01074ee5068c79a6d"
+  integrity sha512-gBVjCaqDlRUk0EwoPNKzIr9KkS9041G/q31IBShPs1Xz6UTA+EXdZADbzqAJQrpDRq71CIMnOP5VMut3SL0z5Q==
+
+node-gyp-build@^4.8.4:
+  version "4.8.4"
+  resolved "https://registry.yarnpkg.com/node-gyp-build/-/node-gyp-build-4.8.4.tgz#8a70ee85464ae52327772a90d66c6077a900cfc8"
+  integrity sha512-LA4ZjwlnUblHVgq0oBF3Jl/6h/Nvs5fzBLwdEF4nuxnFdsfajde4WfxtJr3CaiH+F6ewcIB/q4jQ4UzPyid+CQ==
 
 on-exit-leak-free@^2.1.0:
   version "2.1.2"
